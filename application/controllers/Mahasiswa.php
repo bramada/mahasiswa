@@ -23,6 +23,12 @@ class Mahasiswa extends CI_Controller
 
     public function tambah()
     {
+        $data = [
+            'nama' => $this->input->post('nama'),
+            'nrp' => $this->input->post('nrp'),
+            'email' => $this->input->post('email'),
+            'jurusan' => $this->input->post('jurusan')
+        ];
         $data['judul'] = 'Form Tambah Data Mahasiswa';
 
         $this->form_validation->set_rules('nama', 'Nama', 'required');

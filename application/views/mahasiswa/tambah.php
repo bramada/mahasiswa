@@ -11,17 +11,20 @@
                     <form action="" method="post">
                         <div class="form-group">
                             <label for="nama">Nama</label>
-                            <input type="text" name="nama" class="form-control" id="nama">
+                            <?php if (form_error('nama')==!null){$error='is-invalid';}else{$error='';} ?>
+                            <input type="text" name="nama" class="form-control <?= $error ?>" id="nama" value="<?= $nama ?>">
                             <small class="form-text text-danger"><?= form_error('nama'); ?></small>
                         </div>
                         <div class="form-group">
                             <label for="nrp">NRP</label>
-                            <input type="text" name="nrp" class="form-control" id="nrp">
+                            <?php if (form_error('nrp')==!null){$error='is-invalid';}else{$error='';} ?>
+                            <input type="text" name="nrp" class="form-control <?= $error ?>" id="nrp" value="<?= $nrp ?>">
                             <small class="form-text text-danger"><?= form_error('nrp'); ?></small>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="text" name="email" class="form-control" id="email">
+                            <?php if (form_error('email')==!null){$error='is-invalid';}else{$error='';} ?>
+                            <input type="text" name="email" class="form-control <?= $error ?>" id="email" value="<?= $email ?>">
                             <small class="form-text text-danger"><?= form_error('email'); ?></small>
                         </div>
                         <div class="form-group">
